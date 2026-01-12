@@ -1,4 +1,6 @@
-﻿namespace cSharp120126.Struct
+﻿using System.Net.WebSockets;
+
+namespace cSharp120126.Struct
 {
     public struct Client
     {

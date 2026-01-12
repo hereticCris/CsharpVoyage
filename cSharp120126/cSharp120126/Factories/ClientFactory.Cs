@@ -15,7 +15,7 @@ namespace cSharp120126.Factories
             if(clientToUpdate.uId == 0)
                 Console.WriteLine("Client not found, unable to update client.");
             
-            var updatedClient = new Client(prenom, nom)
+            var updatedClient = new Struct.Client(prenom, nom)
             {
                 uId = clientToUpdate.uId // Preserve the original uId
             };

@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 namespace cSharp120126.Factories
 {
     public static class ClientFactory
@@ -17,10 +15,15 @@ namespace cSharp120126.Factories
             if(clientToUpdate.uId == 0)
                 Console.WriteLine("Client not found, unable to update client.");
             
-            clientToUpdate.Prenom = prenom;
-            clientToUpdate.Nom = nom;
+            var updatedClient = new Client(prenom, nom)
+            {
+                uId = clientToUpdate.uId // Preserve the original uId
+            };
 
-            return clientToUpdate;
+            int index = Model.StructSet.Clients.IndexOf(clientToUpdate);
+            Model.StructSet.Clients[index] = updatedClient;
+
+            return updatedClient;
         }
 
         public static string DisplayAllClients()

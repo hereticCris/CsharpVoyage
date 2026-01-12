@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("Bienvenu dane le programme ");
 string choix = "9";
-while (choix != "0" && choix != "1" && choix != "2" && choix != "3")
+while (choix != "0")
 {
     Console.WriteLine("Faitez votre choix entre :\n" +
         "1. Gérer les Clients\n" +
